@@ -1,0 +1,6 @@
+[2020-11-07 09:00:21,121] INFO The cleaning for partition second_topic-2 is aborted and paused (kafka.log.LogCleaner)
+[2020-11-07 09:00:21,123] INFO The cleaning for partition second_topic-2 is aborted (kafka.log.LogCleaner)
+[2020-11-07 09:00:21,141] INFO The cleaning for partition second_topic-1 is aborted and paused (kafka.log.LogCleaner)
+[2020-11-07 09:00:21,141] INFO The cleaning for partition second_topic-1 is aborted (kafka.log.LogCleaner)
+[2020-11-07 09:00:21,154] INFO The cleaning for partition second_topic-0 is aborted and paused (kafka.log.LogCleaner)
+[2020-11-07 09:00:21,154] INFO The cleaning for partition second_topic-0 is aborted (kafka.log.LogCleaner)
