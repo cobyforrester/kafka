@@ -1,13 +1,19 @@
 # Instructions initial setup
-1. Set up Kafka CLI, by adding kafka_2.12-2.6.0/bin to PATH
-2. mkdir kafka_2.12-2.6.0/data
-3. mkdir kafka_2.12-2.6.0/data/zookeeper
-4. mkdir kafka_2.12-2.6.0/data/kafka
-5. In kafka_2.12-2.6.0/config/zookeeper.properties set dataDir=/home/$NAME/kafka_2.12-2.6.0/data/zookeeper
-6. In kafka_2.12-2.6.0/config/zookeeper.properties set log.dirs=/home/$NAME/kafka_2.12-2.6.0/data/kafka
+1. Pull repo in ~
+2. Set up Kafka CLI, by adding /home/$NAME/kafka/bin to PATH
+3. In kafka/config/zookeeper.properties set dataDir=/home/$NAME/kafka/data/zookeeper
+4. In kafka/config/server.properties set log.dirs=/home/$NAME/kafka/data/kafka
+
+<!-- # FOR FRESH KAFKA SETUP
+1. Set up Kafka CLI, by adding /home/$NAME/kafka/bin to PATH
+2. mkdir kafka/data
+3. mkdir kafka/data/zookeeper
+4. mkdir kafka/data/kafka
+5. In kafka/config/zookeeper.properties set dataDir=/home/$NAME/kafka/data/zookeeper
+6. In kafka/config/server.properties set log.dirs=/home/$NAME/kafka/data/kafka -->
 
 
-# Start zookeeper/kafka
+# Start zookeeper/kafka, run in kafka directory
 1. Start zookeeper: zookeeper-server-start.sh config/zookeeper.properties
 2. Start kafka: kafka-server-start.sh config/server.properties
 
