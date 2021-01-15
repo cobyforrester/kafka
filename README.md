@@ -35,5 +35,20 @@
 2. Create and Read From Beginning: kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TOPIC_NAME --from-beginning 
 3. Create Consumer in Group: kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TOPIC_NAME --group APP-NAME # one consumer in group per partition
 
+# Consumer Groups
+1. List Current Consumers: kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+2. Information on Consumer Group: kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group GROUP_NAME
+3. List Lagged Messages/Catch Up: kafka-consumer-groups.sh --bootstrap-server localhost:9092 --topic TOPIC_NAME --describe --group GROUP_NAME
+4. kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group GROUP_NAME --reset-offsets --to-earliest --execute --topic TOPIC_NAME # possible to use --all-topics
+
+
+
+
+
+
+
+
+
+
 
 
