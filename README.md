@@ -1,3 +1,9 @@
+## OTHER OPTIONS
+1. Conductor, Kafka GUI: https://www.conduktor.io/
+2. Open-Source CLI Alternative: https://github.com/edenhill/kafkacat
+
+## KAFKA CLI BELOW
+
 # Instructions initial setup
 1. Pull repo in ~
 2. Set up Kafka CLI, by adding /home/$NAME/kafka/bin to PATH
@@ -28,12 +34,13 @@
 # Producers
 1. Create General Producer: kafka-console-producer.sh --bootstrap-server localhost:9092 --topic TOPIC_NAME # if topic name does not exist will create one on first stream of data
 2. Create With Write confirmation: kafka-console-producer.sh --bootstrap-server localhost:9092 --topic TOPIC_NAME --producer-property acks=all # acks is write confirmation, 0, 1, all
-
+3. Producer With Keys: kafka-console-producer --broker-list localhost:9092 --topic TOPIC_NAME --property parse.key=true --property key.separator=,
 
 # Consumers
 1. Create: kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TOPIC_NAME
 2. Create and Read From Beginning: kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TOPIC_NAME --from-beginning 
 3. Create Consumer in Group: kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TOPIC_NAME --group APP-NAME # one consumer in group per partition
+4. kafka-console-consumer --bootstrap-server localhost:9092 --topic TOPIC_NAME --from-beginning --property print.key=true --property key.separator=,
 
 # Consumer Groups
 1. List Current Consumers: kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
